@@ -9,7 +9,7 @@ from our_store.forms import CustomerRegistrationForm, CustomerLoginForm, ForgotP
 from .models import Order, Cart, Product, Category,CartProduct, User, Customer, Admin, ORDER_STATUS, ProductImage
 from django.urls import reverse_lazy
 from django.contrib.auth import authenticate, login, logout
-from .utils import password_reset_token
+
 from django.core.mail import send_mail
 from django.conf import settings
 
