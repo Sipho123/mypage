@@ -13,6 +13,14 @@ import os
 
 # import django
 from pathlib import Path
+import dj_database_url
+DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
